@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Project 4</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* Reduce spacing between sections */
+            section {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            /* Center image */
+            .img-center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">Sales Forecasting</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#objectives">Objectives</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#eda">EDA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#conclusions">Conclusions</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Data Model Implementation and Optimization">Model Training</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#dataset">Dataset</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Sales Data Forecasting for Rossmann Stores</h1>
+                <p class="lead">A project by Kevin Tran, Shameer Razaak, and Juan Mantilla</p>
+            </div>
+        </header>
+
+        <!-- Introduction section-->
+        <section id="introduction">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>1. Introduction</h2>
+                        <p>The objective of this project is to develop a time series forecasting model to predict daily sales for Rossmann stores. By leveraging historical sales data and various store attributes, we aim to create an accurate predictive model that can assist in business planning and inventory management.</p>
+                        <!-- Logo Image -->
+                        <img src="images/sc00.jpg" alt="Project Logo" class="img-center">
+                    </div>
+                </div>
+            </div>
+        </section
+
+        <!-- Objectives section-->
+        <section id="objectives">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>2. Project Objectives</h2>
+                        <ul>
+                            <li>To retrieve and process sales data from the Rossmann Stores dataset.</li>
+                            <li>To perform exploratory data analysis (EDA) to understand sales trends and patterns.</li>
+                            <li>To engineer relevant features that improve the model's predictive power.</li>
+                            <li>With advancements of Deep Learning, to further improve performance, LSTM might be a good point to start.</li>
+                            <li>To develop and optimize a time series forecasting model that achieves at least 0.80 R-squared.</li>
+                            <li>To document the entire process, including data preprocessing, model development, and evaluation.</li>
+                            <li>To present the findings in a clear and engaging manner.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDA section-->
+        <section class="bg-light" id="eda">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>3. EDA</h2>
+                        <h3>Store sales are influenced by many factors including:</h3>
+                        <ul>
+                            <li>Promotions</li>
+                            <li>Holidays</li>
+                            <li>Competition</li>
+                            <li>Seasonality</li>
+                            <li>Locality</li>
+                        </ul>
+                        
+                    
+                        <!-- Sales vs Customers Graph -->
+                        <h3>Sales vs Customers Comparison:</h3>
+                        <img src="images/sc1.png" alt="Sales vs Customers Graph" class="img-center">
+                          <!-- Sales per Day Graph -->
+                          <h3>Sales per Day:</h3>
+                          <img src="images/sc2.png" alt="Sales per Day Graph" class="img-center">
+                            <!-- Customers per Day Graph -->
+                           <h3>Customers per Day:</h3>
+                           <img src="images/sc3.png" alt="Customers per Day Graph" class="img-center">
+                           <h3>Sales per Customers per Day:</h3>
+                           <img src="images/sc4.png" alt="Sales per Customers Graph" class="img-center">
+                           <h3>Sales per Week - Average Sales per Week:</h3>
+                           <img src="images/sc5.png" alt="Average Sales per Week Graph" class="img-center">
+                           <h3>Weekday Sales Monday - Sunday:</h3>
+                           <img src="images/sc6.png" alt="Weekday Sales Monday - Sunday Graph" class="img-center">
+                           <h3>Sales Overtime - 6 Weeks:</h3>
+                           <img src="images/sc9.png" alt="Sales Overtime Graph" class="img-center">
+                           <h3>Locality:</h3>
+                           <img src="images/sc7.png" alt="Locality Graph" class="img-center">
+                           <h3>Seasonality:</h3>
+                           <img src="images/sc12.png" alt="Seasonality Graph" class="img-center">
+                           <h3>Promotions:</h3>
+                           <img src="images/sc10.png" alt="Promotions Graph" class="img-center">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusions section-->
+        <section id="conclusions">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>4. Conclusions of EDA:</h2>
+                        <ul>
+                            <li>The most selling and crowded store type is B.</li>
+                            <li>Sales are highly correlated with the number of Customers.</li>
+                            <li>For all stores, promotions lead to an increase in both Sales and Customers.</li>
+                            <li>Stores open during School Holidays have more sales than on normal days.</li>
+                            <li>More stores are open during School holidays than State holidays.</li>
+                            <li>Sales increase during Christmas week, likely because people buy more beauty products for Christmas celebrations.</li>
+                            <li>The absence of values in features like CompetitionOpenSinceYear/Month doesn’t indicate a lack of competition, as CompetitionDistance values are not null where the other two values are null.</li>
+                            <li>After analyzing sales using Fourier decomposition, there appears to be a slight seasonality component in the Sales data.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process of Running and Training Model section-->
+        <section id="Data Model Implementation and Optimization">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>5. Process of Running and Training the Model</h2>
+                        <ol>
+                            <li>
+                                <strong>Ensure Dependencies are Installed</strong><br>
+                                Make sure you have all the required libraries installed. You can install them using pip if needed:
+                                <pre><code>pip install numpy pandas matplotlib scikit-learn</code></pre>
+                            </li>
+                            <li>
+                                <strong>Save the Code to a Python Script</strong><br>
+                                Save the provided code in a Python script file, for example, <code>sales_forecasting.py</code>.
+                            </li>
+                            <li>
+                                <strong>Run the Script</strong><br>
+                                Run the script from the command line or an IDE that supports Python. If you're using the command line, navigate to the directory containing your script and execute:
+                                <pre><code>python sales_forecasting.py</code></pre>
+                            </li>
+                            <li>
+                                <strong>Understanding the Code</strong><br>
+                                Here’s a quick overview of what each part of the script does:
+                                <ul>
+                                    <li><strong>Data Loading and Preprocessing:</strong> Loads and normalizes the data.</li>
+                                    <li><strong>Feature Creation:</strong> Creates lag features for the Random Forest model.</li>
+                                    <li><strong>Training and Evaluation:</strong> Trains the Random Forest model and evaluates its performance.</li>
+                                    <li><strong>Plotting Results:</strong> Plots the results of predictions and saves them.</li>
+                                    <li><strong>Forecasting:</strong> Forecasts future sales and saves the results.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dataset section-->
+        <section id="dataset">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>6. Dataset Description</h2>
+                        <p>Dataset Source: Kaggle Rossmann Store Sales Dataset</p>
+                        <p>Link: <a href="https://www.kaggle.com/c/rossmann-store-sales/data">https://www.kaggle.com/c/rossmann-store-sales/data</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4">
+                <p class="m-0 text-center text-white">Copyright &copy; project 4 2024</p>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
