@@ -1,0 +1,4 @@
+Metric,Value
+Training Loss,0.0033199530559485
+Validation Loss,0.006474465520687854
+Cross-validated MSE,0.006220120581014061
