@@ -83,6 +83,51 @@ Involves key hyperparameters like node size, number of trees, and number of feat
 **Applications:**  
 They are used in finance, healthcare, and e-commerce for credit risk evaluation, gene classification, and recommendation engines.
 
+## Model Performance Interpretation
+
+**Training Loss (MSE):** 0.0004147702751754034  
+**Validation Loss (MSE):** 0.0028658269385234197
+
+### Interpretation
+- The **Training Loss** is quite low, indicating that the model is performing well on the training data.
+- The **Validation Loss** is higher compared to the training loss, which suggests that the model might be overfitting to the training data. The model performs well on training data but not as well on new, unseen data.
+
+### Recommendations
+To address this, you might consider:
+- Applying regularization techniques (e.g., L1/L2 regularization) to reduce overfitting.
+
+## Summary of Updates
+
+### Model Regularization
+Improved model generalization by adding constraints to prevent overfitting:
+- **`max_depth=10:`** Limits the maximum depth of the trees to prevent overfitting.
+- **`min_samples_split=10:`** Increases the minimum number of samples required to split an internal node.
+- **`min_samples_leaf=5:`** Increases the minimum number of samples required to be at a leaf node.
+- **`max_features='sqrt':`** Limits the number of features considered for the best split to the square root of the total number of features.
+
+### Cross-Validation
+Enhanced model evaluation with cross-validation:
+- Added cross-validation using `cross_val_score` to assess model performance more robustly.
+- Calculated cross-validated MSE and saved it to performance metrics.
+
+### Forecasting
+Added functionality to forecast future sales for the next 42 days:
+- **`forecast_sales` function:** Predicts future values and returns the forecasted values and corresponding dates.
+- Included forecasts for future sales starting from the last date in the dataset.
+- Added functionality to forecast sales for 42 days after a specific date (2015-07-31).
+
+### Plotting
+Added plotting of the forecast results:
+- Plotted historical sales and forecasted sales for the next 42 days.
+- Plotted historical sales and forecasted sales for the 42 days after 2015-07-31.
+
+### Saving Results
+Saved forecast results to CSV files and plots to PNG files:
+- **`sales_forecast.csv:`** For general forecast results.
+- **`sales_forecast_after_2015-07-31.csv:`** For forecast results starting from 2015-07-31.
+- Added PNG plots for visualizing the forecasts.
+
+
 ## EDA Graphs generated from the machine learning model's dataset
 
 1. **Total Forecast Sales by Day**  
