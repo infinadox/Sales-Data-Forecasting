@@ -162,22 +162,12 @@
                         <li><strong>Forecasting:</strong> Forecasts future sales and saves the results.</li>
                     </ul>
                     </li>
-                    <!-- Adding a blank list item for spacing -->
-                    <li>&nbsp;</li>
-                    <li><strong>Post-Modeling Analysis</strong>
-                        <ul>
-                            <li>Once the machine learning model has produced the sales forecast for 42 days after 07/31/2015, we performed Exploratory Data Analysis (EDA) on the forecasted data.</li>
-                            <li>EDA was conducted to identify trends and patterns within the forecasted data.</li>
-                            <li>The performance of the model, along with the relevant data, was output as CSV files and text files.</li>
-                            <li>Documentation of the model's performance, along with these output files, is available on GitHub.</li>
-                        </ul>
-                    </li>
+                    
                 </ul>
-
                 <!-- Random Forest Summary -->
                 <h2>Random Forest Overview</h2>
                 <p><strong>What is Random Forest?</strong><br>
-                Random Forest is a versatile and widely used machine-learning algorithm developed by Leo Breiman and Adele Cutler. It combines the outputs of multiple decision trees to achieve a single, more accurate result. Random Forest is effective for both classification and regression tasks due to its robustness and flexibility.</p>
+                Random Forest is a versatile and widely-used machine learning algorithm developed by Leo Breiman and Adele Cutler. It combines the outputs of multiple decision trees to achieve a single, more accurate result. Random Forest is effective for both classification and regression tasks due to its robustness and flexibility.</p>
                 
                 <p><strong>Decision Trees</strong><br>
                 Random Forest is built on decision trees, which are simple models that make decisions by asking a series of questions. Each decision tree splits data based on features, ultimately leading to a prediction at the leaf nodes. Decision trees can suffer from issues like bias and overfitting, but combining many such trees helps in mitigating these problems.</p>
@@ -213,6 +203,66 @@
                     <li><strong>E-commerce:</strong> For recommendation engines and cross-selling.</li>
                 </ul>
                 </p>
+                <!-- Model Performance Interpretation -->
+                <h2>Model Performance Interpretation</h2>
+                <p><strong>Training Loss (MSE):</strong> 0.0004147702751754034</p>
+                <p><strong>Validation Loss (MSE):</strong> 0.0028658269385234197</p>
+                <h3>Interpretation:</h3>
+                <p>
+                    The <strong>Training Loss</strong> is quite low, indicating that the model is performing well on the training data.
+                </p>
+                <p>
+                    The <strong>Validation Loss</strong> is higher compared to the training loss, which suggests that the model might be overfitting to the training data. The model performs well on training data but not as well on new, unseen data.
+                </p>
+                <h3>Recommendations:</h3>
+                <p>
+                    To address this, you might consider:
+                </p>
+                <ul>
+                    <li>Applying regularization techniques (e.g., L1/L2 regularization) to reduce overfitting.</li>
+                </ul>
+
+                <!-- Summary of Updates -->
+                <h2>Summary of Updates</h2>
+                <p><strong>Model Regularization:</strong><br>
+                Improved model generalization by adding constraints to prevent overfitting:
+                <ul>
+                    <li><strong>max_depth=10:</strong> Limits the maximum depth of the trees to prevent overfitting.</li>
+                    <li><strong>min_samples_split=10:</strong> Increases the minimum number of samples required to split an internal node.</li>
+                    <li><strong>min_samples_leaf=5:</strong> Increases the minimum number of samples required to be at a leaf node.</li>
+                    <li><strong>max_features='sqrt':</strong> Limits the number of features considered for the best split to the square root of the total number of features.</li>
+                </ul>
+                </p>
+                <p><strong>Cross-Validation:</strong><br>
+                Enhanced model evaluation with cross-validation:
+                <ul>
+                    <li>Added cross-validation using <code>cross_val_score</code> to assess model performance more robustly.</li>
+                    <li>Calculated cross-validated MSE and saved it to performance metrics.</li>
+                </ul>
+                </p>
+                <p><strong>Forecasting:</strong><br>
+                Added functionality to forecast future sales for the next 42 days:
+                <ul>
+                    <li><strong>forecast_sales function:</strong> Predicts future values and returns the forecasted values and corresponding dates.</li>
+                    <li>Included forecasts for future sales starting from the last date in the dataset.</li>
+                    <li>Added functionality to forecast sales for 42 days after a specific date (2015-07-31).</li>
+                </ul>
+                </p>
+                <p><strong>Plotting:</strong><br>
+                Added plotting of the forecast results:
+                <ul>
+                    <li>Plotted historical sales and forecasted sales for the next 42 days.</li>
+                    <li>Plotted historical sales and forecasted sales for the 42 days after 2015-07-31.</li>
+                </ul>
+                </p>
+                <p><strong>Saving Results:</strong><br>
+                Saved forecast results to CSV files and plots to PNG files:
+                <ul>
+                    <li><strong>sales_forecast.csv:</strong> For general forecast results.</li>
+                    <li><strong>sales_forecast_after_2015-07-31.csv:</strong> For forecast results starting from 2015-07-31.</li>
+                    <li>Added PNG plots for visualizing the forecasts.</li>
+                </ul>
+                </p>
 
                 <!-- Add graphs below the Post-Modeling Analysis section -->
                 <h3>EDA performed on CSV files generated by the machine learning model</h3>
@@ -232,6 +282,8 @@
         </div>
     </div>
 </section>
+
+
 
 
     
