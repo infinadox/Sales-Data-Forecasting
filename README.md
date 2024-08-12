@@ -23,12 +23,12 @@ This project aims to develop a time series forecasting model to predict daily sa
 EDA focuses on understanding the sales data through various aspects:
 
 - **Sales vs Customers:** Analyzed the relationship between sales and the number of customers.
-- **Sales per Day:** Evaluated sales trends on a daily basis.
+- **Sales per Day:** Evaluated sales trends daily.
 - **Customers per Day:** Investigated daily customer patterns.
 - **Sales per Customer:** Assessed average sales per customer.
 - **Average Sales per Week:** Reviewed weekly sales trends.
 - **Weekday Sales:** Analyzed sales trends by day of the week.
-- **Sales Overtime:** Examined sales over a 6-week period.
+- **Sales Overtime:** Examined sales over 6 weeks.
 - **Locality:** Studied the impact of store locality on sales.
 - **Seasonality:** Identified seasonal patterns in the sales data.
 - **Promotions:** Evaluated the effect of promotions on sales.
@@ -65,7 +65,7 @@ EDA focuses on understanding the sales data through various aspects:
 ## Random Forest Overview
 
 **What is Random Forest?**  
-Random Forest is a powerful machine learning algorithm that combines the results of multiple decision trees to enhance predictive accuracy. It is effective for both classification and regression tasks.
+Random Forest is a powerful machine learning algorithm combining multiple decision trees' results to enhance predictive accuracy. It is effective for both classification and regression tasks.
 
 **Decision Trees:**  
 Decision trees make decisions based on a series of questions, and Random Forest improves their performance by averaging predictions from many such trees.
@@ -86,9 +86,9 @@ Involves key hyperparameters like node size, number of trees, and number of feat
 - Complex interpretation compared to single decision trees.
 
 **Applications:**  
-Used in finance, healthcare, and e-commerce for tasks such as credit risk evaluation, gene classification, and recommendation engines.
+They are used in finance, healthcare, and e-commerce for credit risk evaluation, gene classification, and recommendation engines.
 
-## EDA Graphs
+## EDA Graphs generated from the machine learning model's dataset
 
 1. **Total Forecast Sales by Day**  
    ![Total Forecast Sales by Day](images/sc14.png)
