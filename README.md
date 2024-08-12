@@ -57,11 +57,6 @@ EDA focuses on understanding the sales data through various aspects:
    - **Plotting Results:** Visualizes predictions and saves plots.
    - **Forecasting:** Produces future sales forecasts and saves results.
 
-## Post-Modeling Analysis
-
-- Conducted EDA on the forecasted data to identify trends and patterns.
-- Outputs include CSV files and text files detailing model performance, available on GitHub.
-
 ## Random Forest Overview
 
 **What is Random Forest?**  
