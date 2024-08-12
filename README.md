@@ -13,7 +13,7 @@ This project aims to develop a time series forecasting model to predict daily sa
 - Retrieve and process sales data from the Rossmann Stores dataset.
 - Conduct Exploratory Data Analysis (EDA) to uncover sales trends and patterns.
 - Engineer features to enhance the model's predictive accuracy.
-- Explore advanced techniques, such as LSTM, to potentially improve performance.
+- Explore advanced techniques, such as Random Forest to potentially improve performance.
 - Develop and optimize a time series forecasting model with a target R-squared score of at least 0.80.
 - Document the entire process, from data preprocessing to model evaluation.
 - Present findings clearly and engagingly.
