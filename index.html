@@ -133,40 +133,107 @@
             </div>
         </section>
 
-        <!-- Model Training section-->
-        <section id="model-training">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>4. Model Training</h2>
+<!-- Model Training section-->
+<section id="model-training">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+            <div class="col-lg-8">
+                <h2>4. Model Training</h2>
+                <ul>
+                    <li><strong>Ensure Dependencies are Installed</strong><br>
+                    Make sure you have all the required libraries installed. You can install them using pip if needed:
+                    <pre><code>pip install numpy pandas matplotlib scikit-learn</code></pre>
+                    </li>
+                    <li><strong>Save the Code to a Python Script</strong><br>
+                    Save the provided code in a Python script file, for example, <code>Random_forest.py</code>.
+                    </li>
+                    <li><strong>Run the Script</strong><br>
+                    Run the script from the command line or an IDE that supports Python. If you're using the command line, navigate to the directory containing your script and execute:
+                    <pre><code>python Random_forest.py</code></pre>
+                    </li>
+                    <li><strong>Understanding the Code</strong><br>
+                    Here’s a quick overview of what each part of the script does:
+                    <ul>
+                        <li><strong>Data Loading and Preprocessing:</strong> Loads and normalizes the data.</li>
+                        <li><strong>Feature Creation:</strong> Creates lag features for the Random Forest model.</li>
+                        <li><strong>Training and Evaluation:</strong> Trains the Random Forest model and evaluates its performance.</li>
+                        <li><strong>Plotting Results:</strong> Plots the results of predictions and saves them.</li>
+                        <li><strong>Forecasting:</strong> Forecasts future sales and saves the results.</li>
+                    </ul>
+                    </li>
+                    <!-- Adding a blank list item for spacing -->
+                    <li>&nbsp;</li>
+                    <li><strong>Post-Modeling Analysis</strong>
                         <ul>
-                            <li><strong>Ensure Dependencies are Installed</strong><br>
-                            Make sure you have all the required libraries installed. You can install them using pip if needed:
-                            <pre><code>pip install numpy pandas matplotlib scikit-learn</code></pre>
-                            </li>
-                            <li><strong>Save the Code to a Python Script</strong><br>
-                            Save the provided code in a Python script file, for example, <code>sales_forecasting.py</code>.
-                            </li>
-                            <li><strong>Run the Script</strong><br>
-                            Run the script from the command line or an IDE that supports Python. If you're using the command line, navigate to the directory containing your script and execute:
-                            <pre><code>python sales_forecasting.py</code></pre>
-                            </li>
-                            <li><strong>Understanding the Code</strong><br>
-                            Here’s a quick overview of what each part of the script does:
-                            <ul>
-                                <li><strong>Data Loading and Preprocessing:</strong> Loads and normalizes the data.</li>
-                                <li><strong>Feature Creation:</strong> Creates lag features for the Random Forest model.</li>
-                                <li><strong>Training and Evaluation:</strong> Trains the Random Forest model and evaluates its performance.</li>
-                                <li><strong>Plotting Results:</strong> Plots the results of predictions and saves them.</li>
-                                <li><strong>Forecasting:</strong> Forecasts future sales and saves the results.</li>
-                            </ul>
-                            </li>
+                            <li>Once the machine learning model has produced the sales forecast for 42 days after 07/31/2015, we performed Exploratory Data Analysis (EDA) on the forecasted data.</li>
+                            <li>EDA was conducted to identify trends and patterns within the forecasted data.</li>
+                            <li>The performance of the model, along with the relevant data, was output as CSV files and text files.</li>
+                            <li>Documentation of the model's performance, along with these output files, is available on GitHub.</li>
                         </ul>
-                    </div>
+                    </li>
+                </ul>
+
+                <!-- Random Forest Summary -->
+                <h2>Random Forest Overview</h2>
+                <p><strong>What is Random Forest?</strong><br>
+                Random Forest is a versatile and widely-used machine learning algorithm developed by Leo Breiman and Adele Cutler. It combines the outputs of multiple decision trees to achieve a single, more accurate result. Random Forest is effective for both classification and regression tasks due to its robustness and flexibility.</p>
+                
+                <p><strong>Decision Trees</strong><br>
+                Random Forest is built on decision trees, which are simple models that make decisions by asking a series of questions. Each decision tree splits data based on features, ultimately leading to a prediction at the leaf nodes. Decision trees can suffer from issues like bias and overfitting, but combining many such trees helps in mitigating these problems.</p>
+                
+                <p><strong>Ensemble Methods</strong><br>
+                Random Forest is an ensemble method that uses bagging (Bootstrap Aggregating) and feature randomness. Bagging involves training multiple models on random samples of data and averaging their predictions to reduce variance. Feature randomness ensures that each tree in the forest is trained on a different subset of features, further improving accuracy and reducing correlation among trees.</p>
+                
+                <p><strong>How It Works</strong><br>
+                The Random Forest algorithm involves three main hyperparameters: node size, number of trees, and number of features sampled. Each tree in the forest is trained on a bootstrap sample of the data, and feature bagging introduces additional randomness. Predictions are made by averaging the outputs of all trees (for regression) or by majority voting (for classification). The out-of-bag (OOB) samples are used for cross-validation.</p>
+                
+                <p><strong>Benefits</strong><br>
+                Random Forest offers several advantages:
+                <ul>
+                    <li>Reduced risk of overfitting due to averaging of multiple uncorrelated trees.</li>
+                    <li>High flexibility for both classification and regression tasks.</li>
+                    <li>Ease of determining feature importance, which helps in understanding model contributions.</li>
+                </ul>
+                </p>
+                
+                <p><strong>Challenges</strong><br>
+                Despite its benefits, Random Forest has some challenges:
+                <ul>
+                    <li>Can be time-consuming and resource-intensive due to the large number of trees.</li>
+                    <li>Complex to interpret compared to a single decision tree.</li>
+                </ul>
+                </p>
+                
+                <p><strong>Applications</strong><br>
+                Random Forest is used across various industries:
+                <ul>
+                    <li><strong>Finance:</strong> For evaluating credit risk, detecting fraud, and pricing options.</li>
+                    <li><strong>Healthcare:</strong> For tasks like gene expression classification, biomarker discovery, and predicting drug responses.</li>
+                    <li><strong>E-commerce:</strong> For recommendation engines and cross-selling.</li>
+                </ul>
+                </p>
+
+                <!-- Add graphs below the Post-Modeling Analysis section -->
+                <h3>EDA performed on CSV files generated by the machine learning model</h3>
+                <div class="graph-container">
+                    <img src="images/sc14.png" alt="Total Forecast Sales by Day Graph" class="img-center">
+                    <p><strong>Graph 1:</strong> Total Forecast Sales by Day</p>
+                </div>
+                <div class="graph-container">
+                    <img src="images/sc13.png" alt="Average Forecast Sales by Week Graph" class="img-center">
+                    <p><strong>Graph 2:</strong> Average Forecast Sales per Week</p>
+                </div>
+                <div class="graph-container">
+                    <img src="images/sc15.png" alt="42 Day Sales Forecast" class="img-center">
+                    <p><strong>Graph 3:</strong> 42 Day Sales Forecast</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
+
+    
         <!-- Conclusions section-->
         <section id="conclusions">
             <div class="container px-4">
@@ -182,6 +249,7 @@
                             <li>Sales increase during Christmas week, likely because people buy more beauty products for Christmas celebrations.</li>
                             <li>The absence of values in features like CompetitionOpenSinceYear/Month doesn’t indicate a lack of competition, as CompetitionDistance values are not null where the other two values are null.</li>
                             <li>After analyzing sales using Fourier decomposition, there appears to be a slight seasonality component in the Sales data.</li>
+                            <li>Saturdays are a popular day for shoppers in terms of days of the week, potentially because Rossman stores are closed on Sundays </li>
                         </ul>
                     </div>
                 </div>
