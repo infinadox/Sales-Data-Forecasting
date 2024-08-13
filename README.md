@@ -107,7 +107,6 @@ Enhanced evaluation using cross-validation:
 
 **Plotting:**
 - Plotted historical and forecasted sales for:
-  - The next 42 days.
   - 42 days after 2015-07-31.
 
 **Saving Results:**
