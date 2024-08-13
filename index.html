@@ -58,6 +58,33 @@
         footer a:hover {
             text-decoration: underline;
         }
+        /* Bullet points styling */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            color: #34495e;
+        }
+        ul li::before {
+            content: '\2022';
+            color: #3498db;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        /* Sub-bullets styling */
+        ul ul li {
+            color: #16a085;
+        }
+        ul ul li::before {
+            color: #1abc9c;
+        }
     </style>
 </head>
 <body id="page-top">
@@ -413,7 +440,7 @@
                     <p><span class="highlight">Domain Context:</span> In some contexts, a high R-squared value might be expected, while in others, it might raise questions. For example, in time series forecasting, where patterns might be predictable, a high R-squared might be reasonable. However, in more complex, noisy data (like stock prices), an R-squared this high might seem suspicious.</p>
 
                     <h2>Conclusion</h2>
-                                        <p>Given the high R-squared values across training, validation, and cross-validation, the model appears to be very good.</p>
+                    <p>Given the high R-squared values across training, validation, and cross-validation, the model appears to be very good.</p>
 
                     <!-- Summary of Updates -->
                     <h2>Summary of Updates</h2>
@@ -503,5 +530,3 @@
     <script src="js/scripts.js"></script>
 </body>
 </html>
-
-
