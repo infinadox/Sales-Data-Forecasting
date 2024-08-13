@@ -84,7 +84,7 @@
                             <li>With advancements of Deep Learning, to further improve performance, LSTM might be a good point to start.</li>
                             <li>To develop and optimize a time series forecasting model that achieves at least 0.80 R-squared.</li>
                             <li>To document the entire process, including data preprocessing, model development, and evaluation.</li>
-                            <li>To present the findings clearly and engagingly.</li>
+                            <li>To present the findings in a clear and engaging manner.</li>
                         </ul>
                     </div>
                 </div>
@@ -164,55 +164,65 @@
                     </li>
                     
                 </ul>
-                <!-- Random Forest Summary -->
-                <h2>Random Forest Overview</h2>
-                <p><strong>What is Random Forest?</strong><br>
-                Random Forest is a versatile and widely-used machine learning algorithm developed by Leo Breiman and Adele Cutler. It combines the outputs of multiple decision trees to achieve a single, more accurate result. Random Forest is effective for both classification and regression tasks due to its robustness and flexibility.</p>
                 
-                <p><strong>Decision Trees</strong><br>
-                Random Forest is built on decision trees, which are simple models that make decisions by asking a series of questions. Each decision tree splits data based on features, ultimately leading to a prediction at the leaf nodes. Decision trees can suffer from issues like bias and overfitting, but combining many such trees helps in mitigating these problems.</p>
-                
-                <p><strong>Ensemble Methods</strong><br>
-                Random Forest is an ensemble method that uses bagging (Bootstrap Aggregating) and feature randomness. Bagging involves training multiple models on random samples of data and averaging their predictions to reduce variance. Feature randomness ensures that each tree in the forest is trained on a different subset of features, further improving accuracy and reducing correlation among trees.</p>
-                
-                <p><strong>How It Works</strong><br>
-                The Random Forest algorithm involves three main hyperparameters: node size, number of trees, and number of features sampled. Each tree in the forest is trained on a bootstrap sample of the data, and feature bagging introduces additional randomness. Predictions are made by averaging the outputs of all trees (for regression) or by majority voting (for classification). The out-of-bag (OOB) samples are used for cross-validation.</p>
-                
-                <p><strong>Benefits</strong><br>
-                Random Forest offers several advantages:
-                <ul>
-                    <li>Reduced risk of overfitting due to averaging of multiple uncorrelated trees.</li>
-                    <li>High flexibility for both classification and regression tasks.</li>
-                    <li>Ease of determining feature importance, which helps in understanding model contributions.</li>
-                </ul>
-                </p>
-                
-                <p><strong>Challenges</strong><br>
-                Despite its benefits, Random Forest has some challenges:
-                <ul>
-                    <li>Can be time-consuming and resource-intensive due to the large number of trees.</li>
-                    <li>Complex to interpret compared to a single decision tree.</li>
-                </ul>
-                </p>
-                
-                <p><strong>Applications</strong><br>
-                Random Forest is used across various industries:
-                <ul>
-                    <li><strong>Finance:</strong> For evaluating credit risk, detecting fraud, and pricing options.</li>
-                    <li><strong>Healthcare:</strong> For tasks like gene expression classification, biomarker discovery, and predicting drug responses.</li>
-                    <li><strong>E-commerce:</strong> For recommendation engines and cross-selling.</li>
-                </ul>
-                </p>
+    
+    <h2>What is Random Forest?</h2>
+    <p>Random Forest is a popular machine learning algorithm that combines multiple decision trees to improve accuracy. It can handle both classification (e.g., spam vs. not spam) and regression (e.g., predicting house prices) tasks well.</p>
+    
+    <h3>Decision Trees</h3>
+    <p>Decision trees make decisions by asking a series of questions based on features of the data. Each tree can have issues like bias or overfitting, but Random Forest reduces these issues by combining many trees.</p>
+    
+    <h3>Ensemble Methods</h3>
+    <p>Random Forest is an ensemble method that uses:</p>
+    <ul>
+        <li><strong>Bagging</strong>: Training multiple models on different samples of data and averaging their results to reduce variance.</li>
+        <li><strong>Feature Randomness</strong>: Training each tree on different subsets of features to improve accuracy and reduce correlation among trees.</li>
+    </ul>
+    
+    <h3>How It Works</h3>
+    <p><strong>Node Size, Number of Trees, Number of Features</strong>: Key settings for the model.</p>
+    <p><strong>Training</strong>: Each tree is trained on a random sample of the data, and predictions are made by averaging (for regression) or voting (for classification).</p>
+    <p><strong>Out-of-Bag Samples</strong>: Used for cross-validation to assess model performance.</p>
+    
+    <h3>Benefits</h3>
+    <ul>
+        <li>Reduces risk of overfitting.</li>
+        <li>Flexible for various tasks.</li>
+        <li>Helps identify important features.</li>
+    </ul>
+    
+    <h3>Challenges</h3>
+    <ul>
+        <li>Can be time-consuming and resource-intensive.</li>
+        <li>More complex to interpret than a single decision tree.</li>
+    </ul>
+    
+    <h3>Applications</h3>
+    <ul>
+        <li><strong>Finance</strong>: Credit risk evaluation, fraud detection, option pricing.</li>
+        <li><strong>Healthcare</strong>: Gene classification, biomarker discovery, drug response prediction.</li>
+        <li><strong>E-commerce</strong>: Recommendations, cross-selling.</li>
+    </ul>
+
                 <!-- Model Performance Interpretation -->
-                <h2>Model Performance Interpretation</h2>
+                <h2>Early Iteration</h2>
                 <p><strong>Training Loss (MSE):</strong> 0.0004147702751754034</p>
                 <p><strong>Validation Loss (MSE):</strong> 0.0028658269385234197</p>
-                <h3>Interpretation:</h3>
+                
+                <h3>Performance Interpretation: </h3>
                 <p>
-                    The <strong>Training Loss</strong> is quite low, indicating that the model is performing well on the training data.
+                    The model's performance is evaluated using two key metrics: Training Loss and Validation Loss. These metrics will determine if there is a case of overfitting or underfitting.
                 </p>
                 <p>
-                    The <strong>Validation Loss</strong> is higher compared to the training loss, which suggests that the model might be overfitting to the training data. The model performs well on training data but not as well on new, unseen data.
+                    The <strong>Training Loss (MSE) 0.0004147702751754034 :</strong> This value is very low, suggesting that the model fits the training data well and has learned the underlying patterns from it effectively.
+                </p>
+                <p>
+                    The <strong>
+                        Validation Loss (MSE) 0.0028658269385234197: </strong> This value is significantly higher than the Training Loss, indicating that the model's performance on new, unseen data is not as strong as it is on the training data.
+                </p>
+                <h3>Interpretations </h3>
+                <p>
+                    The discrepancy between the low Training Loss and higher Validation Loss suggests that the model might be overfitting. While it performs excellently on the training data, it struggles to generalize to new data. Overfitting occurs when a model learns the training data too well, including its noise and outliers, which negatively impacts its performance on validation data. This suggests the need for strategies to improve generalization, such as regularization or model simplification
                 </p>
                 <h3>Recommendations:</h3>
                 <p>
@@ -221,7 +231,10 @@
                 <ul>
                     <li>Applying regularization techniques (e.g., L1/L2 regularization) to reduce overfitting.</li>
                 </ul>
-
+                <h2>Final Performance Results</h2>
+                <p><strong>Training Loss (MSE):</strong> 0.0033199530559485</p>
+                <p><strong>Validation Loss (MSE):</strong> 0.006474465520687854</p>
+                <p><strong>Cross-validated MSE:</strong>  0.006220120581014061</p>    
                 <!-- Summary of Updates -->
                 <h2>Summary of Updates</h2>
                 <p><strong>Model Regularization:</strong><br>
