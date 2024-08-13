@@ -40,8 +40,8 @@
                         <li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li>
                         <li class="nav-item"><a class="nav-link" href="#objectives">Objectives</a></li>
                         <li class="nav-item"><a class="nav-link" href="#eda">EDA</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#model-training">Model Training</a></li>
                         <li class="nav-item"><a class="nav-link" href="#conclusions">Summary</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#model-training">Model Training</a></li>  
                         <li class="nav-item"><a class="nav-link" href="https://github.com/infinadox/Sales-Data-Forecasting.git" target="_blank">GitHub</a></li>
                     </ul>
                 </div>
@@ -300,12 +300,45 @@
             </div>
         </section>
 
+<!-- Conclusions section-->
+<section id="conclusions">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center">
+            <div class="col-lg-8">
+                <h2>4. Summary of EDA</h2>
+                <!-- Summary of EDA -->
+
+<p>
+<strong>Store Type Performance:</strong> Store Type B (Medium-sized stores) is the top performer in terms of sales volume and customer traffic, making it the most successful and busiest store type.
+</p>
+<p>
+<strong>Sales and Customer Correlation:</strong> Sales figures show a strong correlation with the number of customers, indicating that higher customer traffic leads to increased sales.
+</p>
+<p>
+<strong>Effectiveness of Promotions:</strong> Across all store types, promotions effectively boost both sales and customer counts, underlining their role in enhancing store performance.
+</p>
+<p>
+<strong>Impact of School Holidays:</strong> Stores open during school holidays achieve higher sales compared to regular days, reflecting increased consumer activity during these periods.
+</p>
+<p>
+<strong>Holiday Analysis:</strong> More stores operate during school holidays than state holidays. Additionally, sales peak during the Christmas week, likely driven by increased demand for beauty products and holiday-related shopping.
+</p>
+<p>
+<strong>Competition Data Insights:</strong> The absence of values in CompetitionOpenSinceYear or CompetitionOpenSinceMonth does not necessarily imply a lack of competition. The presence of non-null CompetitionDistance values indicates that competition exists, even when other related data is missing.
+</p>
+
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Model Training section-->
 <section id="model-training">
     <div class="container px-4">
         <div class="row gx-4 justify-content-center">
             <div class="col-lg-8">
-                <h2>4. Model Training</h2>
+                <h2>5. Model Training</h2>
                 <ul>
                     <li><strong>Ensure Dependencies are Installed</strong><br>
                     Make sure you have all the required libraries installed. You can install them using pip if needed:
@@ -458,43 +491,6 @@
     </div>
 </section>
 
-
-
-
-    
-        <!-- Conclusions section-->
-        <section id="conclusions">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>5. Summary of EDA</h2>
-                        <!-- Summary of EDA -->
-
-<p>
-    <strong>Store Type Performance:</strong> Store Type B (Medium-sized stores) is the top performer in terms of sales volume and customer traffic, making it the most successful and busiest store type.
-</p>
-<p>
-    <strong>Sales and Customer Correlation:</strong> Sales figures show a strong correlation with the number of customers, indicating that higher customer traffic leads to increased sales.
-</p>
-<p>
-    <strong>Effectiveness of Promotions:</strong> Across all store types, promotions effectively boost both sales and customer counts, underlining their role in enhancing store performance.
-</p>
-<p>
-    <strong>Impact of School Holidays:</strong> Stores open during school holidays achieve higher sales compared to regular days, reflecting increased consumer activity during these periods.
-</p>
-<p>
-    <strong>Holiday Analysis:</strong> More stores operate during school holidays than state holidays. Additionally, sales peak during the Christmas week, likely driven by increased demand for beauty products and holiday-related shopping.
-</p>
-<p>
-    <strong>Competition Data Insights:</strong> The absence of values in CompetitionOpenSinceYear or CompetitionOpenSinceMonth does not necessarily imply a lack of competition. The presence of non-null CompetitionDistance values indicates that competition exists, even when other related data is missing.
-</p>
-
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <footer class="py-5 bg-dark">
             <div class="container px-4">
