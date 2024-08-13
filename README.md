@@ -1,6 +1,3 @@
-Here’s a concise summary of your project that you can include in your GitHub README file:
-
----
 
 ## Project Summary
 
