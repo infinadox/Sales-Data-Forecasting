@@ -56,7 +56,7 @@
                 <p class="lead">A project by Kevin Tran, Shameer Razaak, and Juan Mantilla</p>
             </div>
         </header>
-
+        <img src="images/sc00.jpg" alt="Project Logo" class="img-center">
         <!-- Introduction section-->
         <section id="introduction">
             <div class="container px-4">
@@ -65,7 +65,7 @@
                         <h2>1. Introduction</h2>
                         <p>The objective of this project is to develop a time series forecasting model to predict daily sales for Rossmann stores. By leveraging historical sales data and various store attributes, we aim to create an accurate predictive model that can assist in business planning and inventory management.</p>
                         <!-- Logo Image -->
-                        <img src="images/sc00.jpg" alt="Project Logo" class="img-center">
+                        
                     </div>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                             <li>With advancements of Deep Learning, to further improve performance, LSTM might be a good point to start.</li>
                             <li>To develop and optimize a time series forecasting model that achieves at least 0.80 R-squared.</li>
                             <li>To document the entire process, including data preprocessing, model development, and evaluation.</li>
-                            <li>To present the findings clearly and engagingly.</li>
+                            <li>To present the findings in a clear and engaging manner.</li>
                         </ul>
                     </div>
                 </div>
@@ -109,26 +109,181 @@
                         <!-- Sales vs Customers Graph -->
                         <h3>Sales vs Customers Comparison:</h3>
                         <img src="images/sc1.png" alt="Sales vs Customers Graph" class="img-center">
+                        <!-- Textual Analysis -->
+<p>
+    The graph is a scatter plot showing the relationship between the number of customers (x-axis) and sales (y-axis).
+</p>
+<p>
+    <strong>Key Points:</strong>
+    <ul>
+        <li><strong>Positive Correlation:</strong> As the number of customers increases, sales also rise.</li>
+        <li><strong>Data Clusters:</strong> Most points are clustered in the lower to mid-range of customers and sales, showing that most observations have moderate values for both.</li>
+        <li><strong>Variability:</strong> The spread of sales increases with more customers, indicating that sales vary more as the customer count grows.</li>
+        <li><strong>Outliers:</strong> Some points show high sales with a lower number of customers, suggesting larger purchases by certain customers or special cases.</li>
+    </ul>
+</p>
+<p>
+    <strong>Conclusion:</strong>
+    The graph highlights a direct link between customer numbers and sales. Further analysis could explore the variability in sales and investigate outliers for more insights.
+</p>
                         <!-- Sales per Day Graph -->
                         <h3>Sales per Day:</h3>
                         <img src="images/sc2.png" alt="Sales per Day Graph" class="img-center">
+                        <!-- Textual Analysis -->
+<p>
+    This graph shows daily sales from 2013 to 2015.
+</p>
+<p>
+    <strong>Key Observations:</strong>
+    <ul>
+        <li><strong>Overall Trend:</strong> Sales fluctuate daily with consistent peaks and troughs, indicating regular high and low sales periods.</li>
+        <li><strong>Seasonality:</strong> A recurring pattern suggests seasonal sales trends, with more pronounced peaks during certain times, likely around holidays or events.</li>
+        <li><strong>Spikes and Drops:</strong> Noticeable spikes, especially in late 2013 and early 2014, might be due to promotions or product launches. Sharp drops are followed by quick recoveries.</li>
+        <li><strong>Variability:</strong> Sales show consistent variability, with some periods more volatile than others.</li>
+        <li><strong>Potential Anomalies:</strong> Some extreme spikes and drops could indicate outliers or special events needing further investigation.</li>
+    </ul>
+</p>
+<p>
+    <strong>Conclusion:</strong>
+    The graph indicates strong seasonality in sales, with patterns likely tied to specific events. Further analysis could help identify causes and improve sales forecasting.
+</p>
                         <!-- Customers per Day Graph -->
                         <h3>Customers per Day:</h3>
                         <img src="images/sc3.png" alt="Customers per Day Graph" class="img-center">
+                        <!-- Textual Analysis -->
+<p>
+    <strong>Key Points:</strong>
+    <ul>
+        <li><strong>Overall Trend:</strong> Customer numbers rise and fall daily, with regular patterns of high and low activity.</li>
+        <li><strong>Seasonality:</strong> The recurring patterns suggest seasonal trends, with some periods having more customers, possibly due to events or seasons.</li>
+        <li><strong>Spikes and Drops:</strong> Noticeable increases in customers, especially in late 2013 and early 2014, might be linked to promotions or events. Sharp drops quickly recover, showing short-term changes.</li>
+        <li><strong>Variability:</strong> While generally stable, customer numbers vary over time, with some periods showing more fluctuation.</li>
+        <li><strong>Anomalies:</strong> Some extreme spikes and drops could be outliers or special events.</li>
+    </ul>
+</p>
+<p>
+    <strong>Conclusion:</strong>
+    The graph highlights seasonal customer trends with regular peaks and troughs. Significant changes might relate to specific events, and further analysis could help predict future patterns.
+</p>
                         <h3>Sales per Customers per Day:</h3>
                         <img src="images/sc4.png" alt="Sales per Customers Graph" class="img-center">
+                        <!-- Textual Analysis -->
+<p>
+    <strong>Key Points:</strong>
+    <ul>
+        <li><strong>Cyclical Patterns:</strong> Sales fluctuate regularly, likely due to weekly or monthly cycles.</li>
+        <li><strong>Stable Trend:</strong> Overall, sales per customer remain stable over time without significant long-term changes.</li>
+        <li><strong>Spikes and Dips:</strong> There are occasional sharp increases and decreases in sales, which could be due to special events or outliers.</li>
+        <li><strong>Volatility:</strong> The variation in sales is consistent, but some periods show more fluctuation than others.</li>
+    </ul>
+</p>
+<p>
+    <strong>In Summary:</strong>
+    Sales per customer follow a consistent pattern with some periodic ups and downs.
+</p>
                         <h3>Sales per Week - Average Sales per Week:</h3>
                         <img src="images/sc5.png" alt="Average Sales per Week Graph" class="img-center">
+                        <!-- Textual Analysis -->
+<p>
+    <strong>Key Points:</strong>
+    <ul>
+        <li><strong>Weekly Fluctuations:</strong> Sales vary each week.</li>
+        <li><strong>Spikes:</strong> There are some big spikes in sales, especially in late 2013 and early 2015.</li>
+        <li><strong>Stable Trend:</strong> Overall, sales remain steady over time with some occasional peaks.</li>
+    </ul>
+</p>
+<p>
+    <strong>In Short:</strong>
+    Sales fluctuate weekly, with some standout weeks of high sales.
+</p>
                         <h3>Weekday Sales Monday - Sunday:</h3>
-                        <img src="images/sc6.png" alt="Weekday Sales Monday - Sunday Graph" class="img-center">
-                        <h3>Sales Overtime - 6 Weeks:</h3>
+                        <img src="images/sc17.png" alt="Weekday Sales Monday - Sunday Graph" class="img-center">
+                        <!-- Textual Analysis -->
+<p>
+    <strong>Key Observations:</strong>
+    <ul>
+        <li><strong>Highest Sales:</strong> Monday has the highest average sales, indicating it’s the busiest day of the week.</li>
+        <li><strong>Mid-Week Dip:</strong> Sales decline slightly on Tuesday and Wednesday, making these the lowest sales days of the week.</li>
+        <li><strong>Recovery Towards Weekend:</strong> Sales increase again on Friday and Saturday, making them strong sales days, just below Monday.</li>
+    </ul>
+</p>
+<p>
+    <strong>In Summary:</strong>
+    Monday sees the highest sales, with a mid-week dip, and then sales pick up again on Friday and Saturday.
+</p>
+                        <h3>Sales Trend Over 6 Weeks:</h3>
                         <img src="images/sc9.png" alt="Sales Overtime Graph" class="img-center">
+                        <!-- Textual Analysis -->
+<p>
+    <strong>Key Observations:</strong>
+    <ul>
+        <li><strong>High Variability:</strong> Sales fluctuate a lot day-to-day.</li>
+        <li><strong>Stable Overall:</strong> There’s no clear long-term trend; sales stay relatively consistent over time.</li>
+        <li><strong>Occasional Spikes:</strong> Some days have much higher sales, likely due to special events.</li>
+    </ul>
+</p>
+<p>
+    <strong>In Summary:</strong>
+    Sales are stable but vary significantly each day, with occasional high spikes.
+</p>
                         <h3>Locality:</h3>
                         <img src="images/sc7.png" alt="Locality Graph" class="img-center">
+                        <!-- Textual Analysis -->
+<p>
+    <strong>Key Points:</strong>
+    <ul>
+        <li><strong>Store Type b:</strong> Has the highest average sales.</li>
+        <li><strong>Other Store Types (a, c, d):</strong> Have similar, lower sales compared to type b.</li>
+        <li><strong>Outliers:</strong> All store types have days with unusually high sales.</li>
+    </ul>
+</p>
+<p>
+    <strong>In Summary:</strong>
+    Store type b performs the best, while the others have similar sales with occasional high spikes.
+</p>
+   <!-- About Store Types -->
+   <strong>About Store Types</strong>
+   <p>
+       In the Rossmann sales forecasting, the <strong>"StoreType"</strong> feature categorizes stores into types 'a', 'b', 'c', and 'd'. These types reflect different store characteristics like size, location, and product range:
+   </p>
+   <ul>
+       <li><strong>'a':</strong> Largest or standard stores.</li>
+       <li><strong>'b':</strong> Medium-sized stores, possibly with a limited product range.</li>
+       <li><strong>'c':</strong> Smaller or specialized stores.</li>
+       <li><strong>'d':</strong> Stores with unique characteristics or specific locations.</li>
+   </ul>
+   <p>
+       Understanding these types helps improve sales predictions, as each type may have distinct sales patterns.
+   </p>
                         <h3>Seasonality:</h3>
                         <img src="images/sc12.png" alt="Seasonality Graph" class="img-center">
+                        <p>
+                            <strong>Key Points:</strong>
+                            <ul>
+                                <li><strong>Fluctuating Sales:</strong> Sales fluctuate significantly from month to month, with noticeable peaks and dips.</li>
+                                <li><strong>No Clear Trend:</strong> There isn’t a clear upward or downward trend over time; the sales pattern appears irregular.</li>
+                                <li><strong>Occasional Highs:</strong> Some months show significantly higher sales, particularly around the middle of each year.</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>In Summary:</strong>
+                            Monthly sales vary widely with some months performing much better than others, but there's no consistent trend over the period shown.
+                        </p>
                         <h3>Promotions:</h3>
                         <img src="images/sc10.png" alt="Promotions Graph" class="img-center">
+                        <p>
+                            <strong>Key Points:</strong>
+                            <ul>
+                                <li><strong>Higher Sales During Promotions:</strong> The boxplot shows that sales are higher during promotions (Promo = 1) compared to when there's no promotion (Promo = 0).</li>
+                                <li><strong>Increased Variability:</strong> Promotions also lead to more days with very high sales.</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>In Summary:</strong>
+                            Promotions boost sales and lead to more variability in sales amounts.
+                        </p>
+                        <h3>Correlations Heatmap</h3>
+                        <img src="images/sc16.png" alt="Correlations Heatmap" class="img-center">
                     </div>
                 </div>
             </div>
@@ -214,7 +369,7 @@
                     The model's performance is evaluated using two key metrics: Training Loss and Validation Loss. These metrics will determine if there is a case of overfitting or underfitting.
                 </p>
                 <p>
-                    The <strong>Training Loss (MSE) 0.0004147702751754034:</strong> This value is very low, suggesting that the model fits the training data well and has learned the underlying patterns from it effectively.
+                    The <strong>Training Loss (MSE) 0.0004147702751754034 :</strong> This value is very low, suggesting that the model fits the training data well and has learned the underlying patterns from it effectively.
                 </p>
                 <p>
                     The <strong>
