@@ -41,7 +41,3 @@ The goal of this project is to develop a time series forecasting model to predic
 - **Impact of School Holidays:** Higher sales are achieved during school holidays compared to regular days.
 - **Holiday Analysis:** Peak sales during Christmas and increased store operations during school holidays.
 - **Competition Insights:** The presence of competition is indicated by non-null competition distance values, even if other related data is missing.
-
----
-
-Feel free to adjust the content based on any specific details or emphasis you want to add!
