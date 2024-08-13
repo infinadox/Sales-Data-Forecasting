@@ -1,7 +1,7 @@
 
 # Sales Data Forecasting for Rossmann Stores
 
-https://infinadox.github.io/Sales-Data-Forecasting/
+[Presentation Website](https://infinadox.github.io/Sales-Data-Forecasting/)
 
 ## Project Overview
 This project aims to develop a time series forecasting model to predict daily sales for Rossmann stores. By utilizing historical sales data and various store attributes, we seek to create an accurate predictive model that supports business planning and inventory management.
