@@ -1,43 +1,135 @@
 
-## Project Summary
+# Sales Data Forecasting for Rossmann Stores
 
-### Introduction
-The goal of this project is to develop a time series forecasting model to predict daily sales for Rossmann stores. By leveraging historical sales data and various store attributes, this project aims to create an accurate predictive model to assist in business planning and inventory management.
+## Project Overview
+This project aims to develop a time series forecasting model to predict daily sales for Rossmann stores. By utilizing historical sales data and various store attributes, we seek to create an accurate predictive model that supports business planning and inventory management.
 
-### Project Objectives
-- **Data Retrieval and Processing:** Extract and preprocess sales data from the Rossmann Stores dataset.
-- **Exploratory Data Analysis (EDA):** Analyze sales trends and patterns to gain insights.
-- **Feature Engineering:** Develop relevant features to enhance model performance.
-- **Model Development:** Implement and optimize a time series forecasting model, with an initial focus on LSTM due to its effectiveness in capturing sequential patterns.
-- **Performance Metrics:** Achieve a model performance with at least 0.80 R-squared.
-- **Documentation:** Document the entire process including data preprocessing, model development, and evaluation.
-- **Presentation:** Clearly and effectively present the findings.
+**Project Team:** Kevin Tran, Shameer Razaak, and Juan Mantilla  
+**Dataset Source:** Kaggle Rossmann Store Sales Dataset
 
-### Exploratory Data Analysis (EDA)
-- **Sales vs. Customers:** Shows a positive correlation between the number of customers and sales. High variability in sales is observed with increasing customer numbers.
-- **Sales per Day:** Indicates strong seasonality and variability in sales, with notable peaks and troughs.
-- **Customers per Day:** Highlights regular patterns and seasonal trends in customer numbers.
-- **Sales per Customer:** Sales per customer show cyclical patterns with consistent overall trends.
-- **Sales per Week:** Weekly sales fluctuate, with some high-sales weeks particularly noticeable.
-- **Weekday Sales:** Monday has the highest average sales, with a mid-week dip and an increase towards the weekend.
-- **Locality:** Store Type B shows the highest average sales, with other types having similar but lower sales.
-- **Seasonality:** Monthly sales vary widely with no consistent trend, but some months show significantly higher sales.
-- **Promotions:** Promotions lead to higher sales and increased variability.
+## Objectives
+- Retrieve and process sales data from the Rossmann Stores dataset.
+- Conduct Exploratory Data Analysis (EDA) to uncover sales trends and patterns.
+- Engineer features to enhance the model's predictive accuracy.
+- Explore advanced techniques, such as Random Forest, to potentially improve performance.
+- Develop and optimize a time series forecasting model with a target R-squared score of at least 0.80.
+- Document the entire process, from data preprocessing to model evaluation.
+- Present findings clearly and engagingly.
 
-### Model Training
-- **Dependencies:** Ensure all required libraries (e.g., numpy, pandas, scikit-learn) are installed.
-- **Random Forest Model:** Utilized for forecasting, with considerations for regularization and cross-validation to prevent overfitting and ensure robust performance.
-- **Performance:** Initial training showed low training loss but higher validation loss, indicating potential overfitting. Adjustments were made to improve generalization.
-- **Forecasting:** Added functionality to predict future sales for up to 42 days and saved results to CSV files and PNG plots for visualization.
+## Exploratory Data Analysis (EDA)
+EDA focuses on understanding the sales data through various aspects:
+- **Sales vs Customers:** Analyzed the relationship between sales and the number of customers.
+- **Sales per Day:** Evaluated daily sales trends.
+- **Customers per Day:** Investigated daily customer patterns.
+- **Sales per Customer:** Assessed average sales per customer.
+- **Average Sales per Week:** Reviewed weekly sales trends.
+- **Weekday Sales:** Analyzed sales trends by day of the week.
+- **Sales Overtime:** Examined sales over 6 weeks.
+- **Locality:** Studied the impact of store locality on sales.
+- **Seasonality:** Identified seasonal patterns in the sales data.
+- **Promotions:** Evaluated the effect of promotions on sales.
 
-### EDA on Forecast Results
-- **Total Forecast Sales by Day:** Graphs the forecasted sales over time.
-- **Average Forecast Sales by Week:** Shows average sales forecast per week.
+## Model Training
+**Dependencies:**
+Ensure required libraries are installed:
+```bash
+pip install numpy pandas matplotlib scikit-learn
+```
 
-### Summary of Findings
-- **Store Type Performance:** Store Type B is the top performer in sales volume and customer traffic.
-- **Sales and Customer Correlation:** Strong correlation between sales and customer numbers.
-- **Effectiveness of Promotions:** Promotions significantly boost sales and customer counts.
-- **Impact of School Holidays:** Higher sales are achieved during school holidays compared to regular days.
-- **Holiday Analysis:** Peak sales during Christmas and increased store operations during school holidays.
-- **Competition Insights:** The presence of competition is indicated by non-null competition distance values, even if other related data is missing.
+**Running the Script:**
+Save the code in a Python script file (e.g., `Random_forest.py`) and run:
+```bash
+python Random_forest.py
+```
+
+**Understanding the Code:**
+- **Data Loading and Preprocessing:** Normalizes the data.
+- **Feature Creation:** Generates lag features for the Random Forest model.
+- **Training and Evaluation:** Trains the model and assesses performance.
+- **Plotting Results:** Visualizes predictions and saves plots.
+- **Forecasting:** Produces future sales forecasts and saves results.
+
+## Random Forest Overview
+**What is Random Forest?**
+Random Forest is a powerful machine-learning algorithm that combines multiple decision trees to enhance predictive accuracy. It is effective for both classification and regression tasks.
+
+- **Decision Trees:** Make decisions based on a series of questions.
+- **Ensemble Methods:** Uses bagging and feature randomness to build an ensemble of uncorrelated decision trees.
+
+**How It Works:**
+Involves key hyperparameters like node size, number of trees, and number of features sampled. Predictions are made through averaging (for regression) or majority voting (for classification).
+
+**Benefits:**
+- Reduces overfitting.
+- Flexible for various tasks.
+- Provides insights into feature importance.
+
+**Challenges:**
+- Time-consuming and resource-intensive.
+- Complex interpretation compared to single decision trees.
+
+**Applications:**
+Used in finance, healthcare, and e-commerce for tasks such as credit risk evaluation, gene classification, and recommendation engines.
+
+## First Iteration
+- **Training Loss (MSE):** 0.0004147702751754034
+- **Validation Loss (MSE):** 0.0028658269385234197
+
+**Interpretation:**
+- The Training Loss is low, indicating good performance on the training data.
+- The Validation Loss is higher, suggesting potential overfitting. The model performs well on training data but may not generalize as well to new data.
+- 
+## Second Iteration
+- **Training Loss (MSE)**: 0.0033199530559485
+- **Validation Loss (MSE)**: 0.006474465520687854
+- **Cross-validated MSE**: 0.006220120581014061
+
+**Recommendations:**
+- Apply regularization techniques (e.g., L1/L2 regularization) to reduce overfitting.
+
+## Summary of Updates
+**Model Regularization:**
+Improved generalization by adding constraints:
+- `max_depth=10`
+- `min_samples_split=10`
+- `min_samples_leaf=5`
+- `max_features='sqrt'`
+
+**Cross-Validation:**
+Enhanced evaluation using cross-validation:
+- Added `cross_val_score` to assess performance more robustly.
+- Calculated and saved cross-validated MSE.
+
+**Forecasting:**
+- Added functionality to forecast future sales for the next 42 days:
+  - `forecast_sales` function predicts future values and returns the forecasted values and dates.
+  - Included forecasts for the next 42 days and starting from 2015-07-31.
+
+**Plotting:**
+- Plotted historical and forecasted sales for:
+  - The next 42 days.
+  - 42 days after 2015-07-31.
+
+**Saving Results:**
+- Saved forecast results to CSV files and plots to PNG files:
+  - `sales_forecast.csv`
+  - `sales_forecast_after_2015-07-31.csv`
+
+## EDA Graphs
+- **Total Forecast Sales by Day**
+- **Average Forecast Sales per Week**
+- **42 Day Sales Forecast**
+
+## Conclusions
+- Store type B shows the highest sales and customer traffic.
+- Sales strongly correlate with the number of customers.
+- Promotions boost sales and customer counts.
+- Sales are higher during school holidays compared to other holidays.
+- Increased sales during Christmas week.
+- Missing values in certain features do not necessarily indicate a lack of competition.
+- Slight seasonality observed in sales data.
+- Saturdays are popular shopping days.
+
+---
+
+Feel free to adjust any part according to your needs!
