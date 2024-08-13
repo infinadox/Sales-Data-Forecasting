@@ -42,7 +42,6 @@
                         <li class="nav-item"><a class="nav-link" href="#eda">EDA</a></li>
                         <li class="nav-item"><a class="nav-link" href="#model-training">Model Training</a></li>
                         <li class="nav-item"><a class="nav-link" href="#conclusions">Conclusions</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#dataset">Dataset</a></li>
                         <li class="nav-item"><a class="nav-link" href="https://github.com/infinadox/Sales-Data-Forecasting.git" target="_blank">GitHub</a></li>
                     </ul>
                 </div>
@@ -53,7 +52,7 @@
         <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
                 <h1 class="fw-bolder">Sales Data Forecasting for Rossmann Stores</h1>
-                <p class="lead">A project by Kevin Tran, Shameer Razaak, and Juan Mantilla</p>
+                <p class="lead">by Kevin Tran, Shameer Razaak, and Juan Mantilla</p>
             </div>
         </header>
         <img src="images/sc00.jpg" alt="Project Logo" class="img-center">
@@ -284,6 +283,18 @@
                         </p>
                         <h3>Correlations Heatmap</h3>
                         <img src="images/sc16.png" alt="Correlations Heatmap" class="img-center">
+                        <p>
+                            <strong>Key Points:</strong>
+                            <ul>
+                                <li><strong>Sales and Customers:</strong> Sales and customers are strongly related—more customers lead to higher sales.</li>
+                                <li><strong>Promotions:</strong> Promotions help boost sales, with a moderate positive effect.</li>
+                                <li><strong>Store Openings:</strong> Sales happen when stores are open—no surprise there.</li>
+                                <li><strong>Competition Distance:</strong> Competition distance doesn’t significantly affect sales.</li>
+                            </ul>
+                        </p>
+                        <p>
+                            <strong>In Summary:</strong> More customers and promotions drive sales, while competition distance doesn't have much impact.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -457,15 +468,27 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2>5. Summary of EDA</h2>
-                        <ul>
-                            <li>The most selling and crowded store type is B.</li>
-                            <li>Sales are highly correlated with the number of Customers.</li>
-                            <li>For all stores, promotions lead to an increase in both Sales and Customers.</li>
-                            <li>Stores open during School Holidays have more sales than on normal days.</li>
-                            <li>More stores are open during School holidays than State holidays.</li>
-                            <li>Sales increase during Christmas week, likely because people buy more beauty products for Christmas celebrations.</li>
-                            <li>The absence of values in features like CompetitionOpenSinceYear/Month doesn’t indicate a lack of competition, as CompetitionDistance values are not null where the other two values are null.</li>
-                        
+                        <!-- Summary of EDA -->
+
+<p>
+    <strong>Store Type Performance:</strong> Store Type B (Medium-sized stores) is the top performer in terms of sales volume and customer traffic, making it the most successful and busiest store type.
+</p>
+<p>
+    <strong>Sales and Customer Correlation:</strong> Sales figures show a strong correlation with the number of customers, indicating that higher customer traffic leads to increased sales.
+</p>
+<p>
+    <strong>Effectiveness of Promotions:</strong> Across all store types, promotions effectively boost both sales and customer counts, underlining their role in enhancing store performance.
+</p>
+<p>
+    <strong>Impact of School Holidays:</strong> Stores open during school holidays achieve higher sales compared to regular days, reflecting increased consumer activity during these periods.
+</p>
+<p>
+    <strong>Holiday Analysis:</strong> More stores operate during school holidays than state holidays. Additionally, sales peak during the Christmas week, likely driven by increased demand for beauty products and holiday-related shopping.
+</p>
+<p>
+    <strong>Competition Data Insights:</strong> The absence of values in CompetitionOpenSinceYear or CompetitionOpenSinceMonth does not necessarily imply a lack of competition. The presence of non-null CompetitionDistance values indicates that competition exists, even when other related data is missing.
+</p>
+
                             
                         </ul>
                     </div>
@@ -473,23 +496,11 @@
             </div>
         </section>
 
-        <!-- Dataset section-->
-        <section id="dataset">
-            <div class="container px-4">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2>6. Dataset Description</h2>
-                        <p>Dataset Source: Kaggle Rossmann Store Sales Dataset</p>
-                        <p>Link: <a href="https://www.kaggle.com/c/rossmann-store-sales/data">https://www.kaggle.com/c/rossmann-store-sales/data</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer-->
         <footer class="py-5 bg-dark">
             <div class="container px-4">
-                <p class="m-0 text-center text-white">Copyright &copy; project 4 2024</p>
+                <p class="m-0 text-center text-white">
+                    <a href="https://www.kaggle.com/c/rossmann-store-sales/data" class="text-white" target="_blank" rel="noopener noreferrer">Kaggle Dataset</a>
+                </p>
             </div>
         </footer>
 
