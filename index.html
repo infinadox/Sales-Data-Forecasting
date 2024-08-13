@@ -430,7 +430,67 @@
                 <h2>Final Performance Results</h2>
                 <p><strong>Training Loss (MSE):</strong> 0.0033199530559485</p>
                 <p><strong>Validation Loss (MSE):</strong> 0.006474465520687854</p>
-                <p><strong>Cross-validated MSE:</strong>  0.006220120581014061</p>    
+                <p><strong>Cross-validated MSE:</strong>  0.006220120581014061</p> 
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>R-squared Analysis</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            line-height: 1.6;
+                            margin: 20px;
+                        }
+                        h2 {
+                            color: #2c3e50;
+                        }
+                        p {
+                            margin: 10px 0;
+                        }
+                        ul {
+                            margin: 10px 0 20px 20px;
+                        }
+                        li {
+                            margin-bottom: 5px;
+                        }
+                        .highlight {
+                            color: #e74c3c;
+                            font-weight: bold;
+                        }
+                    </style>
+                <body>
+                    <h2>R-squared Formula</h2>
+                    <p>This formula represents R-squared as 1 &minus; 
+                        <sup>&#x2211;</sup>(y<sub>i</sub> &minus; ŷ<sub>i</sub>)<sup>2</sup> /
+                        <sup>&#x2211;</sup>(y<sub>i</sub> &minus; ȳ)<sup>2</sup>, where:
+                    </p>
+                    <ul>
+                        <li><i>y<sub>i</sub></i> is the actual value,</li>
+                        <li><i>ŷ<sub>i</sub></i> is the predicted value,</li>
+                        <li><i>ȳ</i> is the mean of the actual values.</li>
+                    </ul>
+                
+                    <h2>R-squared Values</h2>
+                    <p>The R-squared values based on the given MSE and variance of the sales data are:</p>
+                    <ul>
+                        <li><strong>Training R-squared:</strong> 0.9999999998</li>
+                        <li><strong>Validation R-squared:</strong> 0.9999999996</li>
+                        <li><strong>Cross-Validation R-squared:</strong> 0.9999999996</li>
+                    </ul>
+                
+                    <h2>Considerations</h2>
+                    <p><span class="highlight">Overfitting:</span> If the R-squared value is extremely high, especially on the training data, there is a risk that the model might be overfitting. Overfitting occurs when the model captures not only the underlying patterns but also the noise in the training data, which can lead to poor performance on new, unseen data.</p>
+                
+                    <p><span class="highlight">Validation and Cross-Validation:</span> Since the R-squared values for both validation and cross-validation are also close to 1.0, this suggests that the model is performing very well on unseen data, reducing the concern of overfitting.</p>
+                
+                    <p><span class="highlight">Domain Context:</span> In some contexts, a high R-squared value might be expected, while in others, it might raise questions. For example, in time series forecasting, where patterns might be predictable, a high R-squared might be reasonable. However, in more complex, noisy data (like stock prices), an R-squared this high might seem suspicious.</p>
+                
+                    <h2>Conclusion</h2>
+                    <p>Given the high R-squared values across training, validation, and cross-validation, the model appears to be very good.</p>
+                </body>
+
                 <!-- Summary of Updates -->
                 <h2>Summary of Updates</h2>
                 <p><strong>Model Regularization:</strong><br>
