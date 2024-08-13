@@ -350,13 +350,13 @@
                         </li>
                     </ul>
 
-                    <h2>What is Random Forest?</h2>
+                    <h3>What is Random Forest?</h3>
                     <p>Random Forest is a popular machine learning algorithm that combines multiple decision trees to improve accuracy. It can handle both classification (e.g., spam vs. not spam) and regression (e.g., predicting house prices) tasks well.</p>
 
-                    <h3>Decision Trees</h3>
+                    <h2>Decision Trees</h2>
                     <p>Decision trees make decisions by asking a series of questions based on features of the data. Each tree can have issues like bias or overfitting, but Random Forest reduces these issues by combining many trees.</p>
 
-                    <h3>Ensemble Methods</h3>
+                    <h2>Ensemble Methods</h2>
                     <p>Random Forest is an ensemble method that uses:</p>
                     <ul>
                         <li><strong>Bagging:</strong> Training multiple models on different samples of data and averaging their results to reduce variance.</li>
@@ -368,20 +368,20 @@
                     <p><strong>Training:</strong> Each tree is trained on a random sample of the data, and predictions are made by averaging (for regression) or voting (for classification).</p>
                     <p><strong>Out-of-Bag Samples:</strong> Used for cross-validation to assess model performance.</p>
 
-                    <h3>Benefits</h3>
+                    <h2>Benefits</h2>
                     <ul>
                         <li>Reduces the risk of overfitting.</li>
                         <li>Flexible for various tasks.</li>
                         <li>Helps identify important features.</li>
                     </ul>
 
-                    <h3>Challenges</h3>
+                    <h2>Challenges</h2>
                     <ul>
                         <li>Can be time-consuming and resource-intensive.</li>
                         <li>More complex to interpret than a single decision tree.</li>
                     </ul>
 
-                    <h3>Applications</h3>
+                    <h2>Applications</h2>
                     <ul>
                         <li><strong>Finance:</strong> Credit risk evaluation, fraud detection, option pricing.</li>
                         <li><strong>Healthcare:</strong> Gene classification, biomarker discovery, drug response prediction.</li>
@@ -389,25 +389,25 @@
                     </ul>
 
                     <!-- Model Performance Interpretation -->
-                    <h2>Early Iteration</h2>
+                    <h3>Early Iteration</h3>
                     <p><strong>Training Loss (MSE):</strong> 0.0004147702751754034</p>
                     <p><strong>Validation Loss (MSE):</strong> 0.0028658269385234197</p>
 
-                    <h3>Performance Interpretation:</h3>
+                    <h2>Performance Interpretation:</h2>
                     <p>The model's performance is evaluated using two key metrics: Training Loss and Validation Loss. These metrics will determine if there is a case of overfitting or underfitting.</p>
                     <p>The <strong>Training Loss (MSE) 0.0004147702751754034</strong> suggests that the model fits the training data well and has learned the underlying patterns from it effectively.</p>
                     <p>The <strong>Validation Loss (MSE) 0.0028658269385234197</strong> is significantly higher than the Training Loss, indicating that the model's performance on new, unseen data is not as strong as it is on the training data.</p>
 
-                    <h3>Interpretations:</h3>
+                    <h2>Interpretations:</h2>
                     <p>The discrepancy between the low Training Loss and higher Validation Loss suggests that the model might be overfitting. While it performs excellently on the training data, it struggles to generalize to new data. Overfitting occurs when a model learns the training data too well, including its noise and outliers, which negatively impacts its performance on validation data. This suggests the need for strategies to improve generalization, such as regularization or model simplification.</p>
 
-                    <h3>Recommendations:</h3>
+                    <h2>Recommendations:</h2>
                     <p>To address this, you might consider:</p>
                     <ul>
                         <li>Applying regularization techniques (e.g., L1/L2 regularization) to reduce overfitting.</li>
                     </ul>
 
-                    <h2>Final Performance Results</h2>
+                    <h3>Final Performance Results</h3>
                     <p><strong>Training Loss (MSE):</strong> 0.0033199530559485</p>
                     <p><strong>Validation Loss (MSE):</strong> 0.006474465520687854</p>
                     <p><strong>Cross-validated MSE:</strong> 0.006220120581014061</p>
@@ -443,7 +443,7 @@
                     <p>Given the high R-squared values across training, validation, and cross-validation, the model appears to be very good.</p>
 
                     <!-- Summary of Updates -->
-                    <h2>Summary of Updates</h2>
+                    <h3>Summary of Updates</h3>
                     <p><strong>Model Regularization:</strong><br>
                     Improved model generalization by adding constraints to prevent overfitting:
                     <ul>
@@ -487,27 +487,27 @@
                     <div class="graph-container">
                         <img src="images/sc14.png" alt="Total Forecast Sales by Day Graph" class="img-center">
                         <p><strong>Graph 1:</strong> Forecast of sales over time</p>
-                        <h3>Key Points:</h3>
+                        <p><strong>Key Points:</strong></p>
                         <ul>
                             <li><strong>Daily Variability:</strong> Forecasted sales change a lot from day to day. Some days have much higher sales, while others have lower sales. This shows that daily sales are affected by different factors each day.</li>
                             <li><strong>High Sales Days:</strong> On some days, forecasted sales are very high, reaching up to 10,000 units. These peaks likely result from special events, promotions, or seasonal factors that boost sales significantly.</li>
                             <li><strong>No Clear Trend:</strong> There is no clear pattern of sales increasing or decreasing over time. The forecasted sales appear random, with no consistent trend. This suggests that sales fluctuations are due to varying and unpredictable factors.</li>
                         </ul>
 
-                        <h3>Conclusion:</h3>
+                        <h2>Conclusion:</h2>
                         <p>Sales forecasts show large day-to-day variations, with some days having much higher sales than others. There’s no obvious trend, indicating that the changes are due to unpredictable factors or events.</p>
                     </div>
                     <div class="graph-container">
                         <img src="images/sc13.png" alt="Average Forecast Sales by Week Graph" class="img-center">
                         <p><strong>Graph 2:</strong> Average Forecast Sales per Week</p>
-                        <h3>Key Points:</h3>
+                        <p><strong>Key Points:</strong></p>
                         <ul>
                             <li><strong>Consistent Weekly Sales:</strong> Average weekly sales are fairly steady, ranging between 6,000 and 7,000 units each week.</li>
                             <li><strong>No Significant Trend:</strong> There is no clear upward or downward trend in the weekly sales averages. The figures remain stable with no major changes from week to week.</li>
                             <li><strong>Slight Variations:</strong> Although the weekly averages are generally consistent, there are minor fluctuations. However, these variations are not significant.</li>
                         </ul>
 
-                        <h3>Conclusion:</h3>
+                        <h2>Conclusion:</h2>
                         <p>Average weekly sales forecasts are stable with no major trends or changes, indicating steady sales expectations throughout the period.</p>
                     </div>
                 </div>
